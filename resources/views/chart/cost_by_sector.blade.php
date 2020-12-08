@@ -5,7 +5,7 @@
 <html>
 
 <head>
-  <title>Controle Veiculos</title>
+  <title>Controle Setor</title>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
   <style type="text/css">

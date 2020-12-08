@@ -23,7 +23,7 @@
 
 <body>
 
-  <h1 class="ls-title-intro ls-ico-chart-bar-up">Custos por veículo</h1>
+  <h1 class="ls-title-intro ls-ico-chart-bar-up">Custos por veículos</h1>
   <div class="ls-box">
     <div id="section-table">
       <div class="ls-box">
