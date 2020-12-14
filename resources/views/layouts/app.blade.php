@@ -40,7 +40,7 @@
                 <img src="{{asset('images/LogoHSJ.png')}}" class="logo2" />
               </div>
               <div class="form-group col-md-3">
-                <img src="{{asset('images/LgWC2.png')}}" class="logo3" />
+                <img src="{{asset('images/LgWC2.png')}}" style="width: 90px;" />
               </div>
 
             </div>
