@@ -28,7 +28,7 @@ Route::group(['middleware' => ['auth', 'noRolesAssigned']], function () {
     Route::get('/', 'HomeController@index')->name('home');
 });
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/accessdenied', 'AccessdeniedController@index')->name('accessdenied.add');
+Route::get('/accessdenied', 'AccessDeniedController@index')->name('accessdenied.add');
 
 Route::group(['middleware' => ['auth', 'userRequest']], function () {
     //================================== ROTAS PARA Solicitação ==================================//

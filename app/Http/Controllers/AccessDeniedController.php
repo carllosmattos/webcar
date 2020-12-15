@@ -8,6 +8,6 @@ class AccessDeniedController extends Controller
 {
   public function index()
   {
-    return view('accessdenied.index');
+    return view('accessdenied/index.');
   }
 }
