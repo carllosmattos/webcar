@@ -157,7 +157,12 @@
         <th style="width: 88px;">Ramal</th>
       </tr>
       <tr>
-        <td>{{$authorizacao->namesolicitante}}</td>
+        @inject('sectors', '\App\Sector')
+        @foreach($sectors->getSectors() as $sector)
+          @if($solicitacao->namesolicitante === $sector->cc)
+            <td>{{$authorizacao->namesolicitante}} - {{$sector->sector}}</td>
+          @endif
+        @endforeach
         <td>{{$authorizacao->nameramal}}</td>
       </tr>
     </tbody>

@@ -1,17 +1,16 @@
 @extends('layouts.application')
 
 @section('content')
+<fieldset>
 <h1 class="ls-title-intro ls-ico-book">Informações sobre o Sistema</h1>
 
-<h5 class="ls-title-4">Projeto Social Voluntário <br><br> Projeto Prático em Análise e Desenvolvimento Web.</h5>
 <br>
-<br>
-<h3 class="ls-title-3">WebCar HSJ</h3>
+<h3 class="ls-title-3">Controle de Veículos</h3>
 
 <br>
 
 <p>Este projeto foi idealizado pela Diretoria Administrativa do Hospital São José <br> em parceria voluntária com alunos da Faculdade Evolução.</p>
-<p>A <strong>versão 1.0</strong> desenvolvida por eles compreendia os seguintes tópicos.</p>
+<p>A <strong>versão 1.0</strong> desenvolvida pelos mesmos compreendia os seguintes tópicos.</p>
 
 <ul style="margin-left: 20px;">
   <li>Cadastro de usuário</li>
@@ -27,19 +26,21 @@
 </ul>
 <br>
 
-<h3 class="ls-title"><strong>Versão 1.0</strong> Desenvolvida Por:</h3>
+<h4 class="ls-title"><strong>Versão 1.0</strong> Desenvolvida Por:</h4>
 <br>
-<h4 class="ls-title">Flavio De Souza</h4>
+<h6 class="ls-title">Flavio De Souza</h6>
 <br>
-<h4 class="ls-title">Paulo Roberto da Silva Junior</h4>
+<h6 class="ls-title">Paulo Roberto da Silva Junior</h6>
 <br>
-<h4 class="ls-title">Luana Silva de Castro</h4>
+<h6 class="ls-title">Luana Silva de Castro</h6>
 <br>
-<h3 class="ls-title-7"> Alunos da Faculdade Evolução - Curso Sistemas para Internet.</h3>
+<h4 class="ls-title-7"> Alunos da Faculdade Evolução - Curso Sistemas para Internet.</h4>
 <br>
 
-<h5 class="ls-title-5">Versão 2.0</h5>
-<p>Com a necissade de atualizar seus processos internos, o Hospital São José seguiu adiante com recursos próprios o desenvolvimento do sistema</p>
+<br>
+<h3 class="ls-title-3"><strong>Versão 1.0</strong>WebCar HSJ</h3>
+
+<p>Com a necessidade de atualizar seus processos internos, o Hospital São José seguiu adiante com recursos próprios o desenvolvimento do sistema</p>
 <p>Consulte a documentação do sistema clicando no link a seguir.</p>
 
 <a href="#">Documentação</a>
@@ -47,6 +48,7 @@
 <br>
 <br>
 <br>
+</fieldset>
 
 
 <footer class="footer">© 2020 - Todos os direitos reservados</footer>
