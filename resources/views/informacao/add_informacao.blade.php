@@ -21,7 +21,7 @@
   <ul style="margin-left: 10px;">
     <li>Pagina inicial</li>
     <li>Menus que compreendem as opções listadas antes</li>
-    <li>Gráfico contendo informações do Status dos veículos da frota</li>
+    <li>Gráfico simples contendo informações de quantidade de veículpos por Status</li>
   </ul>
 </ul>
 <br>
@@ -38,7 +38,7 @@
 <br>
 
 <br>
-<h3 class="ls-title-3"><strong>Versão 1.0</strong>WebCar HSJ</h3>
+<h3 class="ls-title-3"><strong>Versão 1.0 </strong>WebCar HSJ</h3>
 
 <p>Com a necessidade de atualizar seus processos internos, o Hospital São José </p>
 <p>seguiu adiante com recursos próprios o desenvolvimento do sistema</p>
