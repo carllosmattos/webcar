@@ -40,7 +40,8 @@
 <br>
 <h3 class="ls-title-3"><strong>Versão 1.0</strong>WebCar HSJ</h3>
 
-<p>Com a necessidade de atualizar seus processos internos, o Hospital São José seguiu adiante com recursos próprios o desenvolvimento do sistema</p>
+<p>Com a necessidade de atualizar seus processos internos, o Hospital São José </p>
+<p>seguiu adiante com recursos próprios o desenvolvimento do sistema</p>
 <p>Consulte a documentação do sistema clicando no link a seguir.</p>
 
 <a href="#">Documentação</a>
