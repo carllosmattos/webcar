@@ -159,7 +159,7 @@
       <tr>
         @inject('sectors', '\App\Sector')
         @foreach($sectors->getSectors() as $sector)
-          @if($solicitacao->namesolicitante === $sector->cc)
+          @if($authorizacao->namesolicitante === $sector->cc)
             <td>{{$authorizacao->namesolicitante}} - {{$sector->sector}}</td>
           @endif
         @endforeach
