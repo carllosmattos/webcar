@@ -44,7 +44,7 @@
 <p>seguiu adiante com recursos próprios o desenvolvimento do sistema</p>
 <p>Consulte a documentação do sistema clicando no link a seguir.</p>
 
-<a href="#">Documentação</a>
+<a id="User" href="https://docs.google.com/document/d/1RZxiIJd_8kh77bJ7Zg05usddbHS0GNPiLap6mUo5rAw/edit?usp=sharing">Documentação</a>
 
 <br>
 <br>
