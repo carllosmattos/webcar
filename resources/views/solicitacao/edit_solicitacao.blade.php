@@ -34,7 +34,7 @@
                 <div class="form-group col-md-3">
                     <label class="ls-label col-md-12 @error('nameramal') ls-error @enderror">
                         <b class="ls-label-text">Ramal</b>
-                        <input value="{{ $solicitacao->nameramal }}" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" name="nameramal" placeholder="Ramal" maxlength="4" autocomplete="off">
+                        <input value="{{ $solicitacao->nameramal }}" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" name="nameramal" placeholder="Ramal" maxlength="5" autocomplete="off">
 
                         @error('nameramal')
                         <div class="ls-help-message">
