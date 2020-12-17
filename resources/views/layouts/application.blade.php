@@ -40,7 +40,7 @@
     <h1 class="ls-brand-name">
       <div class="container-fluid">
         <!-- <div class="form-group col-md-6" style="width: 200px; height: 50px; top: -8px; background-color: #fff;"> -->
-          <img src="{{URL::asset('images/LogoHSJ.png')}}" alt="profile Pic" style="width: 200px; height: 50px; top: -8px; background-color: #fff;">
+          <img src="{{URL::asset('images/LogoHSJ.png')}}" alt="profile Pic" style="width: 170px; height: 42px; top: -8px; background-color: #fff;">
 
         <!-- </div> -->
 
