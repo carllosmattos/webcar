@@ -68,7 +68,7 @@
             $dateDay = date('d'); //
             $dateMonth = date('m'); //
             $dateYear = date('Y'); //
-            $amountMonth = cal_days_in_month(CAL_GREGORIAN, $dateMonth, $dateYear);
+            $amountMonth = date("t"); //ultimo dia do mês
             $sevenDay = $amountMonth - 7; //
             $allowedStartDateExpense = $dateYear . '-'. $dateMonth . '-' . $sevenDay . ' 23:59:59'; //2020-11-23 23:59:59
             $firtsMonthDate = $dateYear . '-'. $dateMonth . '-01 00:00:00'; //2020-11-01 00:00:00
