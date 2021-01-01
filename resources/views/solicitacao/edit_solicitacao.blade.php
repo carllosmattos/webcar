@@ -51,7 +51,7 @@
                 <div class="form-group col-md-3">
                     <label class="ls-label col-md-12 @error('origem') ls-error @enderror">
                         <b class="ls-label-text">Origem</b>
-                        <input type="text" class="form-control" name="origem" placeholder="Roteiro" value="$solicitacao->origem">
+                        <input type="text" class="form-control" name="origem" value="{{$solicitacao->origem}}">
 
                         @error('origem')
                         <div class="ls-help-message">
@@ -64,7 +64,7 @@
                 <div class="form-group col-md-3">
                     <label class="ls-label col-md-12 @error('destino') ls-error @enderror">
                         <b class="ls-label-text">Destino</b>
-                        <input type="text" class="form-control" name="destino" placeholder="Destino" value="$solicitacao->destino">
+                        <input type="text" class="form-control" name="destino" value="{{$solicitacao->destino}}">
 
                         @error('destino')
                         <div class="ls-help-message">
@@ -100,7 +100,7 @@
                 <div class="form-group col-md-3">
                     <label class="ls-label col-md-12 @error('datasaida') ls-error @enderror">
                         <b class="ls-label-text">Data da saída</b>
-                        <input type="date" class="form-control" name="datasaida" value="{{date('d-m-Y', strtotime($solicitacao->datasaida))}}">
+                        <input type="date" class="form-control" name="datasaida" value="{{date('Y-m-d', strtotime($solicitacao->datasaida))}}">
                         <!-- <input type="datetime-local" class="form-control" name="datahorasaida" value="{{date('Y-m-d', strtotime($solicitacao->datahorasaida))}}T{{date('H:i', strtotime($solicitacao->datahorasaida))}}" min="{{date('Y-m-d')}}T{{date('H:i', strtotime('-3 hour', strtotime(date('H:i'))))}}"> -->
                         @error('datasaida')
                         <div class="ls-help-message">
@@ -129,7 +129,7 @@
                 <div class="form-group col-md-3">
                     <label class="ls-label col-md-12 @error('dataretorno') ls-error @enderror">
                         <b class="ls-label-text">Data de retorno</b>
-                        <input type="date" class="form-control" name="dataretorno" value="{{date('d-m-Y', strtotime($solicitacao->dataretorno))}}">
+                        <input type="date" class="form-control" name="dataretorno" value="{{date('Y-m-d', strtotime($solicitacao->dataretorno))}}">
                         @error('dataretorno')
                         <div class="ls-help-message">
                             {{$message}}
