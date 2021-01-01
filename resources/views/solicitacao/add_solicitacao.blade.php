@@ -46,11 +46,11 @@
 
       <div class="col-md-12">
         <div class="form-group col-md-3">
-          <label class="ls-label col-md-12 @error('nameroteiro') ls-error @enderror">
+          <label class="ls-label col-md-12 @error('origem') ls-error @enderror">
             <b class="ls-label-text">Origem</b>
-            <input type="text" class="form-control" name="nameroteiro[]" value="{{old('nameroteiro')}}">
+            <input type="text" class="form-control" name="origem" value="{{old('origem')}}">
 
-            @error('nameroteiro')
+            @error('origem')
             <div class="ls-help-message">
               {{$message}}
             </div>
@@ -60,11 +60,11 @@
         </div>
 
         <div class="form-group col-md-3">
-          <label class="ls-label col-md-12 @error('nameroteiro') ls-error @enderror">
+          <label class="ls-label col-md-12 @error('destino') ls-error @enderror">
             <b class="ls-label-text">Destino</b>
-            <input type="text" class="form-control" name="nameroteiro[]" value="{{old('nameroteiro')}}">
+            <input type="text" class="form-control" name="destino" value="{{old('destino')}}">
 
-            @error('nameroteiro')
+            @error('destino')
             <div class="ls-help-message">
               {{$message}}
             </div>
