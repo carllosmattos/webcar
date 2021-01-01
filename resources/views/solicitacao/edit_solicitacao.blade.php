@@ -47,14 +47,11 @@
 
             </div>
 
-            <?php $tags =  $solicitacao->nameroteiro;
-            $tagsArray = explode(' - ', $tags); ?>
-
             <div class="col-md-12">
                 <div class="form-group col-md-3">
                     <label class="ls-label col-md-12 @error('origem') ls-error @enderror">
                         <b class="ls-label-text">Origem</b>
-                        <input type="text" class="form-control" name="origem" placeholder="Roteiro">
+                        <input type="text" class="form-control" name="origem" placeholder="Roteiro" value="$solicitacao->origem">
 
                         @error('origem')
                         <div class="ls-help-message">
@@ -67,7 +64,7 @@
                 <div class="form-group col-md-3">
                     <label class="ls-label col-md-12 @error('destino') ls-error @enderror">
                         <b class="ls-label-text">Destino</b>
-                        <input type="text" class="form-control" name="destino" placeholder="Roteiro">
+                        <input type="text" class="form-control" name="destino" placeholder="Destino" value="$solicitacao->destino">
 
                         @error('destino')
                         <div class="ls-help-message">
