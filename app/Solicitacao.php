@@ -42,10 +42,8 @@ class Solicitacao extends Model
     $solicitacao->nameramal = $field['nameramal'];
     $solicitacao->nameroteiro = implode(" - ", $field['nameroteiro']);
     $solicitacao->namefinalidade = $field['namefinalidade'];
-    $solicitacao->datahorasaida = $field['datasaida'];
-    $solicitacao->datahorasaida = $field['horasaida'];
-    $solicitacao->datahoraretorno = $field['dataretorno'];
-    $solicitacao->datahoraretorno = $field['horaretorno'];
+    $solicitacao->datahorasaida = $field['datahorasaida'];
+    $solicitacao->datahoraretorno = $field['datahoraretorno'];
     $solicitacao->nameusuario = $field['nameusuario'];
 
     $solicitacao->name_driver = 'SEM MOTORISTA';
