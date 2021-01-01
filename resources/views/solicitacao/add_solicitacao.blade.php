@@ -128,7 +128,7 @@
       <div class="col-md-12">
         <div class="form-group col-md-3">
           <label class="ls-label col-md-12 @error('dataretorno') ls-error @enderror">
-            <b class="ls-label-text">Data retorno</b>
+            <b class="ls-label-text">Data do retorno</b>
             <input type="date" class="form-control" name="dataretorno" value="{{old('dataretorno')}}">
             @error('dataretorno')
             <div class="ls-help-message">
