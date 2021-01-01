@@ -52,7 +52,7 @@
 
             <div class="col-md-12">
                 <div class="form-group col-md-3">
-                    <label class="ls-label col-md-12 @error('nameroteiro') ls-error @enderror">
+                    <label class="ls-label col-md-12 @error('origem') ls-error @enderror">
                         <b class="ls-label-text">Origem</b>
                         <input type="text" class="form-control" name="origem" placeholder="Roteiro">
 
@@ -132,7 +132,7 @@
                 <div class="form-group col-md-3">
                     <label class="ls-label col-md-12 @error('dataretorno') ls-error @enderror">
                         <b class="ls-label-text">Data de retorno</b>
-                        <input type="date" class="form-control" name="dataretorno" value="{{date('d-m-Y', strtotime($solicitacao->dataretorno))}}>
+                        <input type="date" class="form-control" name="dataretorno" value="{{date('d-m-Y', strtotime($solicitacao->dataretorno))}}">
                         @error('dataretorno')
                         <div class="ls-help-message">
                             {{$message}}

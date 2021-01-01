@@ -75,10 +75,13 @@ class SolicitacaoController extends Controller
     $solicitacao = $this->solicitacao->find($id);
     $solicitacao->namesolicitante     = $info['namesolicitante'];
     $solicitacao->nameramal           = $info['nameramal'];
-    $solicitacao->nameroteiro         = implode(" - ", $info['nameroteiro']);
+    $solicitacao->origem              = $info['origem'];
+    $solicitacao->destino             = $info['destino'];
     $solicitacao->namefinalidade      = $info['namefinalidade'];
-    $solicitacao->datahorasaida       = $info['datahorasaida'];
-    $solicitacao->datahoraretorno     = $info['datahoraretorno'];
+    $solicitacao->datasaida           = $info['datasaida'];
+    $solicitacao->horasaida           = $info['horasaida'];
+    $solicitacao->dataretorno         = $info['dataretorno'];
+    $solicitacao->horaretorno         = $info['horaretorno'];
     $solicitacao->nameusuario         = $info['nameusuario'];
 
     if(($solicitacao->statussolicitacao == 'PENDENTE') || ($solicitacao->statussolicitacao == null)){
