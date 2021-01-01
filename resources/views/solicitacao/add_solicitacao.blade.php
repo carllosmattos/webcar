@@ -95,8 +95,8 @@
       <h5 style="margin-left: 20px;" class="ls-title-5">Previsão de utilização</h5>
       <hr>
       <div class="col-md-12">
-        <div class="form-group col-md-3">
-          <label class="ls-label col-md-12 @error('datahorasaida') ls-error @enderror">
+        <div class="form-group col-md-6">
+          <label class="ls-label col-md-6 @error('datahorasaida') ls-error @enderror">
             <b class="ls-label-text">Data da saída</b>
             <input type="date" class="form-control" name="datasaida" value="{{old('datasaida')}}">
             <!-- <input type="datetime-local" class="form-control" name="datahorasaida" value="{{old('datahorasaida')}}" min="{{date('Y-m-d')}}T{{date('H:i', strtotime('-3 hour', strtotime(date('H:i'))))}}"> -->
@@ -107,7 +107,7 @@
             @enderror
 
           </label>
-          <label class="ls-label col-md-12 @error('datahorasaida') ls-error @enderror">
+          <label class="ls-label col-md-6 @error('datahorasaida') ls-error @enderror">
             <b class="ls-label-text">Hora da saída</b>
             <input type="time" class="form-control" name="horasaida" value="{{old('horasaida')}}">
             <!-- <input type="datetime-local" class="form-control" name="datahorasaida" value="{{old('datahorasaida')}}" min="{{date('Y-m-d')}}T{{date('H:i', strtotime('-3 hour', strtotime(date('H:i'))))}}"> -->
@@ -120,7 +120,7 @@
           </label>
         </div>
 
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-6">
           <label class="ls-label col-md-6 @error('datahoraretorno') ls-error @enderror">
             <b class="ls-label-text">Data do retorno</b>
             <input type="date" class="form-control" name="dataretorno" value="{{old('dataretorno')}}">
