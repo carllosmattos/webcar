@@ -26,10 +26,13 @@ class SolicitacaoRequest extends FormRequest
         return [
             'namesolicitante'   => 'required',
             'nameramal'         => 'required|min:4',
-            'nameroteiro'       => 'required',
+            'origem'            => 'required',
+            'destino'           => 'required',
             'namefinalidade'    => 'required',
-            'datahorasaida'     => 'required',
-            'datahoraretorno'   => 'required|date|after_or_equal:datahorasaida',
+            'datasaida'     => 'required',
+            'horasaida'     => 'required',
+            'dataretorno'     => 'required|time|after_or_equal:datasaida',
+            'horaretorno'   => 'required|date|after_or_equal:horasaida',
             'nameusuario'       => 'required',
         ];
     }
@@ -42,15 +45,19 @@ class SolicitacaoRequest extends FormRequest
     public function messages()
     {
         return [
-            'namesolicitante.required' => 'Por favor informe o setor solicitante.',
-            'nameramal.required'       => 'Por favor informe o ramal do seu setor.',
-            'nameramal.min'            => 'O ramal deve conter no mínimo 4 dígitos',
-            'nameroteiro.required'     => 'Por favor informe o roteiro.',
-            'namefinalidade.required'  => 'Por favor informe a finalidade desta solicitação.',
-            'datahorasaida.required'   => 'Por favor informe a data e hora de saída.',
-            'datahoraretorno.required' => 'Insira uma data e hora de retorno mesmo que não necessite retornar.',
-            'datahoraretorno.after_or_equal' => 'Desculpe! Não possuímos um DeLorean? A data e hora de retorno não podem ser anterior à data e hora de saída.',
-            'nameusuario.required'     => 'Por favor informe o mome do solicitante ou paciente.',
+            'namesolicitante.required'   => 'Por favor informe o setor solicitante.',
+            'nameramal.required'         => 'Por favor informe o ramal do seu setor.',
+            'nameramal.min'              => 'O ramal deve conter no mínimo 4 dígitos',
+            'origem.required'            => 'Por favor informe a origem da solicitação.',
+            'destino.required'           => 'Por favor informe o destino da solicitação.',
+            'namefinalidade.required'    => 'Por favor informe a finalidade desta solicitação.',
+            'datasaida.required'         => 'Por favor informe a data de saída.',
+            'horasaida.required'         => 'Por favor informe a hora de saída.',
+            'dataretorno.required'       => 'Insira uma data de retorno mesmo que não necessite retornar.',
+            'horaretorno.required'       => 'Insira uma hora de retorno mesmo que não necessite retornar.',
+            'dataretorno.after_or_equal' => 'Desculpe! Não possuímos um DeLorean? A data retorno não podem ser anterior à data e hora de saída.',
+            'horaretorno.after_or_equal' => 'Desculpe! Não possuímos um DeLorean? A hora de retorno não podem ser anterior à data e hora de saída.',
+            'nameusuario.required'       => 'Por favor informe o mome do solicitante ou paciente.',
         ];
     }
 }
