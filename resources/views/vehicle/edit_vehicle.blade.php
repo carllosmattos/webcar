@@ -91,7 +91,7 @@
         </div>
         <div class="form-group col-md-4">
           <label class="ls-label col-md-12 @error('descricao') ls-error @enderror"">
-            <b class=" ls-label-text">Descrição da situação</b>
+            <b class=" ls-label-text">Descrição</b>
 
             <input id="editsituacao" class="ls-no-spin" type="text" name="descricao" value="{{ $vehicle->descricao }}">
 
