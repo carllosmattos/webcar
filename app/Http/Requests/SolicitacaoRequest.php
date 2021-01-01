@@ -31,8 +31,8 @@ class SolicitacaoRequest extends FormRequest
             'namefinalidade'    => 'required',
             'datasaida'         => 'required',
             'horasaida'         => 'required',
-            'dataretorno'       => 'required|date_format:H:i|after_or_equal:datasaida',
-            'horaretorno'       => 'required|date|after_or_equal:horasaida',
+            'dataretorno'       => 'required|date|after_or_equal:datasaida',
+            'horaretorno'       => 'required|date_format:H:i|after_or_equal:horasaida',
             'nameusuario'       => 'required',
         ];
     }
