@@ -96,10 +96,11 @@
       <hr>
       <div class="col-md-12">
         <div class="form-group col-md-3">
-          <label class="ls-label col-md-12 @error('datahorasaida') ls-error @enderror">
-            <b class="ls-label-text">Data e hora da saída</b>
-            <input type="date" class="form-control" name="datahorasaida" value="{{old('datahorasaida')}}" min="{{date('Y-m-d')}}T{{date('H:i', strtotime('-3 hour', strtotime(date('H:i'))))}}">
-            @error('datahorasaida')
+          <label class="ls-label col-md-12 @error('datasaida') ls-error @enderror">
+            <b class="ls-label-text">Data da saída</b>
+            <input type="date" class="form-control" name="datasaida" value="{{old('datasaida')}}">
+            <!-- <input type="date" class="form-control" name="datasaida" value="{{old('datahorasaida')}}" min="{{date('Y-m-d')}}T{{date('H:i', strtotime('-3 hour', strtotime(date('H:i'))))}}"> -->
+            @error('datasaida')
             <div class="ls-help-message">
               {{$message}}
             </div>
@@ -109,11 +110,11 @@
         </div>
 
         <div class="form-group col-md-3">
-          <label class="ls-label col-md-12 @error('datahoraretorno') ls-error @enderror">
-            <b class="ls-label-text">Data e hora do retorno</b>
-            <input type="date" class="form-control" name="datahoraretorno" value="{{old('datahoraretorno')}}">
+          <label class="ls-label col-md-12 @error('horasaida') ls-error @enderror">
+            <b class="ls-label-text">Hora do saida</b>
+            <input type="time" class="form-control" name="horasaida" value="{{old('horasaida')}}">
 
-            @error('datahoraretorno')
+            @error('horasaida')
             <div class="ls-help-message">
               {{$message}}
             </div>
@@ -122,6 +123,37 @@
           </label>
         </div>
       </div>
+
+      
+      <div class="col-md-12">
+        <div class="form-group col-md-3">
+          <label class="ls-label col-md-12 @error('dataretorno') ls-error @enderror">
+            <b class="ls-label-text">Data retorno</b>
+            <input type="date" class="form-control" name="dataretorno" value="{{old('dataretorno')}}">
+            @error('dataretorno')
+            <div class="ls-help-message">
+              {{$message}}
+            </div>
+            @enderror
+
+          </label>
+        </div>
+
+        <div class="form-group col-md-3">
+          <label class="ls-label col-md-12 @error('horaretorno') ls-error @enderror">
+            <b class="ls-label-text">Hora do retorno</b>
+            <input type="time" class="form-control" name="horaretorno" value="{{old('horaretorno')}}">
+
+            @error('horaretorno')
+            <div class="ls-help-message">
+              {{$message}}
+            </div>
+            @enderror
+
+          </label>
+        </div>
+      </div>
+
       <!-- Previsão de Utilização do Veiculo -->
 
       <!-- Nome dos Pacientes -->
