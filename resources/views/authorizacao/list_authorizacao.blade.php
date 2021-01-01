@@ -53,10 +53,10 @@
     @else
     @endif
     @endforeach
-    <td>{{ $authorizacao->nameroteiro }}</td>
+    <td>{{ $authorizacao->origem }} - {{ $authorizacao->destino }}</td>
     <td>{{ $authorizacao->namefinalidade }}</td>
-    <td>Data: {{date('Y-m-d', strtotime($authorizacao->datahorasaida))}} </br>Hora: {{date('H:i', strtotime($authorizacao->datahorasaida))}}</td>
-    <td>Data: {{date('Y-m-d', strtotime($authorizacao->datahoraretorno))}} </br>Hora: {{date('H:i', strtotime($authorizacao->datahoraretorno))}}</td>
+    <td>Data: {{date('d-m-Y', strtotime($authorizacao->datasaida))}} </br>Hora: {{date('H:i', strtotime($authorizacao->horasaida))}}</td>
+    <td>Data: {{date('d-m-Y', strtotime($authorizacao->dataretorno))}} </br>Hora: {{date('H:i', strtotime($authorizacao->horaretorno))}}</td>
     <td>{{ $authorizacao->nameusuario }}</td>
 
     <td> 

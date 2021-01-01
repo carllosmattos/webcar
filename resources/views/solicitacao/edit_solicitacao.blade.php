@@ -113,7 +113,7 @@
 
                 <div class="form-group col-md-3">
                     <label class="ls-label col-md-12 @error('horasaida') ls-error @enderror">
-                        <b class="ls-label-text">Hora do saída</b>
+                        <b class="ls-label-text">Hora da saída</b>
                         <input type="time" class="form-control" name="horasaida" value="{{date('H:i', strtotime($solicitacao->horasaida))}}">
 
                         @error('horasaida')

@@ -111,7 +111,7 @@
 
         <div class="form-group col-md-3">
           <label class="ls-label col-md-12 @error('horasaida') ls-error @enderror">
-            <b class="ls-label-text">Hora do saida</b>
+            <b class="ls-label-text">Hora da saida</b>
             <input type="time" class="form-control" name="horasaida" value="{{old('horasaida')}}">
 
             @error('horasaida')
