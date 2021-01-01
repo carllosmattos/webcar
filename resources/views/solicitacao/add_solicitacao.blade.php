@@ -98,7 +98,7 @@
         <div class="form-group col-md-3">
           <label class="ls-label col-md-12 @error('datahorasaida') ls-error @enderror">
             <b class="ls-label-text">Data e hora da saída</b>
-            <input type="datetime-local" class="form-control ls-mask-date_time" name="datahorasaida" value="{{old('datahorasaida')}}" min="{{date('Y-m-d')}}T{{date('H:i', strtotime('-3 hour', strtotime(date('H:i'))))}}">
+            <input class="form-control ls-mask-date_time" name="datahorasaida" value="{{old('datahorasaida')}}" min="{{date('Y-m-d')}}T{{date('H:i', strtotime('-3 hour', strtotime(date('H:i'))))}}">
             @error('datahorasaida')
             <div class="ls-help-message">
               {{$message}}
