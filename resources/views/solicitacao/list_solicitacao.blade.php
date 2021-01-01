@@ -46,10 +46,10 @@
 						@endif
 					@endforeach
 					<td>{{ $solicitacao->nameramal }}</td>
-					<td>{{ $solicitacao->nameroteiro }}</td>
+					<td>{{ $solicitacao->origem }} - {{ $solicitacao->destino }}</td>
 					<td>{{ $solicitacao->namefinalidade }}</td>
-					<td>Data: {{date('Y-m-d', strtotime($solicitacao->datasaida))}} </br>Hora: {{date('H:i', strtotime($solicitacao->horasaida))}}</td>
-					<td>Data: {{date('Y-m-d', strtotime($solicitacao->dataretorno))}} </br>Hora: {{date('H:i', strtotime($solicitacao->horaretorno))}}</td>
+					<td>Data: {{date('d-m-Y', strtotime($solicitacao->datasaida))}} </br>Hora: {{date('H:i', strtotime($solicitacao->horasaida))}}</td>
+					<td>Data: {{date('d-m-Y', strtotime($solicitacao->dataretorno))}} </br>Hora: {{date('H:i', strtotime($solicitacao->horaretorno))}}</td>
 					<td>{{ $solicitacao->nameusuario }}</td>
 					@if($solicitacao->statussolicitacao == "PENDENTE")
 					<td><label class="ls-ico-history" style="color: red;"> {{ $solicitacao->statussolicitacao }}</label></td>
