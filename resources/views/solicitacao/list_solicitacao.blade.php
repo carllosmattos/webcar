@@ -48,8 +48,8 @@
 					<td>{{ $solicitacao->nameramal }}</td>
 					<td>{{ $solicitacao->nameroteiro }}</td>
 					<td>{{ $solicitacao->namefinalidade }}</td>
-					<td>Data: {{date('yy-m-d', strtotime($solicitacao->datahorasaida))}} </br>Hora: {{date('H:i', strtotime($solicitacao->datahorasaida))}}</td>
-					<td>Data: {{date('yy-m-d', strtotime($solicitacao->datahoraretorno))}} </br>Hora: {{date('H:i', strtotime($solicitacao->datahoraretorno))}}</td>
+					<td>Data: {{date('Y-m-d', strtotime($solicitacao->datasaida))}} </br>Hora: {{date('H:i', strtotime($solicitacao->horasaida))}}</td>
+					<td>Data: {{date('Y-m-d', strtotime($solicitacao->dataretorno))}} </br>Hora: {{date('H:i', strtotime($solicitacao->horaretorno))}}</td>
 					<td>{{ $solicitacao->nameusuario }}</td>
 					@if($solicitacao->statussolicitacao == "PENDENTE")
 					<td><label class="ls-ico-history" style="color: red;"> {{ $solicitacao->statussolicitacao }}</label></td>
