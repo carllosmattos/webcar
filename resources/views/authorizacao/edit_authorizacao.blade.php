@@ -58,7 +58,7 @@
                     <div class="form-group col-md-3">
                         <label class="ls-label col-md-12 @error('nameroteiro') ls-error @enderror">
                             <b class="ls-label-text">Destino</b>
-                            <input type="text" class="form-control" name="nameroteiro" value="{{$authorizacao->nameroteiro}}" disabled>
+                            <input type="text" class="form-control" name="nameroteiro" value="{{$authorizacao->origem}} - {{$authorizacao->destino}}" disabled>
 
                             @error('nameroteiro')
                             <div class="ls-help-message">
