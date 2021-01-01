@@ -40,10 +40,13 @@ class Solicitacao extends Model
     $solicitacao->user_id = Auth::user()->id;
     $solicitacao->namesolicitante = $field['namesolicitante'];
     $solicitacao->nameramal = $field['nameramal'];
-    $solicitacao->nameroteiro = implode(" - ", $field['nameroteiro']);
+    $solicitacao->origem = $field['origem'];
+    $solicitacao->destino = $field['destino'];
     $solicitacao->namefinalidade = $field['namefinalidade'];
-    $solicitacao->datahorasaida = $field['datahorasaida'];
-    $solicitacao->datahoraretorno = $field['datahoraretorno'];
+    $solicitacao->datasaida = $field['datasaida'];
+    $solicitacao->horasaida = $field['horasaida'];
+    $solicitacao->dataretorno = $field['dataretorno'];
+    $solicitacao->horaretorno = $field['horaretorno'];
     $solicitacao->nameusuario = $field['nameusuario'];
 
     $solicitacao->name_driver = 'SEM MOTORISTA';
