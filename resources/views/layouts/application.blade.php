@@ -78,7 +78,7 @@
             <a href="{{ route('authorizacoes') }}" class="ls-ico-checkmark-circle" title="Autorizacao">Autorizar Solicitações
               <small style="border: 1px solid red; padding: 0px 4px; border-radius: 50px; background-color: red; color:#fff">
                 {{ App\Authorizacao::where('statussolicitacao', 'PENDENTE')
-  ->where('datahorasaida', '>', date('Y-m-d', mktime(0, 0, 0, date('m') , 1 , date('Y'))))
+  ->where('datasaida', '>', date('Y-m-d', mktime(0, 0, 0, date('m') , 1 , date('Y'))))
   ->count() }}
               </small>
             </a>
