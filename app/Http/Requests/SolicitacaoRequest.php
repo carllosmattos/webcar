@@ -29,10 +29,10 @@ class SolicitacaoRequest extends FormRequest
             'origem'            => 'required',
             'destino'           => 'required',
             'namefinalidade'    => 'required',
-            'datasaida'     => 'required',
-            'horasaida'     => 'required',
-            'dataretorno'     => 'required|time|after_or_equal:datasaida',
-            'horaretorno'   => 'required|date|after_or_equal:horasaida',
+            'datasaida'         => 'required',
+            'horasaida'         => 'required',
+            'dataretorno'       => 'required|date_format:H:i|after_or_equal:datasaida',
+            'horaretorno'       => 'required|date|after_or_equal:horasaida',
             'nameusuario'       => 'required',
         ];
     }
