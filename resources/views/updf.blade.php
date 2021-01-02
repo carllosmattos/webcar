@@ -175,7 +175,7 @@
         <th style="width: 337px;">Finalidade</th>
       </tr>
       <tr>
-        <td rowspan="4">{{$authorizacao->nameroteiro}}</td>
+        <td rowspan="4">{{$authorizacao->origem}} - {{$authorizacao->destino}}</td>
         <td rowspan="4">{{$authorizacao->namefinalidade}}</td>
       </tr>
     </tbody>
@@ -200,10 +200,10 @@
         <td>Hora</td>
       </tr>
       <tr>
-        <td>{{date('yy-m-d', strtotime($authorizacao->datahorasaida))}}</td>
-        <td>{{date('H:i', strtotime($authorizacao->datahorasaida))}}</td>
-        <td>{{date('yy-m-d', strtotime($authorizacao->datahoraretorno))}}</td>
-        <td>{{date('H:i', strtotime($authorizacao->datahoraretorno))}}</td>
+        <td>{{date('d-m-Y', strtotime($authorizacao->datasaida))}}</td>
+        <td>{{date('H:i', strtotime($authorizacao->horasaida))}}</td>
+        <td>{{date('d-m-Y', strtotime($authorizacao->dataretorno))}}</td>
+        <td>{{date('H:i', strtotime($authorizacao->horaretorno))}}</td>
       </tr>
     </tbody>
   </table>
@@ -272,10 +272,10 @@
         <td>Km <br>Final</td>
       </tr>
       <tr>
-        <td>{{date('yy-m-d', strtotime($authorizacao->datahorasaidaautorizada))}}</td>
-        <td>{{date('H:i', strtotime($authorizacao->datahorasaidaautorizada))}}</td>
-        <td>{{date('yy-m-d', strtotime($authorizacao->datahoraretornoautorizada))}}</td>
-        <td>{{date('H:i', strtotime($authorizacao->datahoraretornoautorizada))}}</td>
+        <td>{{date('d-m-Y', strtotime($authorizacao->datasaidaautorizada))}}</td>
+        <td>{{date('H:i', strtotime($authorizacao->horasaidaautorizada))}}</td>
+        <td>{{date('d-m-Y', strtotime($authorizacao->dataretornoautorizada))}}</td>
+        <td>{{date('H:i', strtotime($authorizacao->horaretornoautorizada))}}</td>
         <!-- Implementar lógica de Quilometragem -->
         <td>{{$authorizacao->kminicial}}</td>
         <td>{{$authorizacao->kmfinal}}</td>
@@ -298,7 +298,7 @@
       </tr>
       <tr>
         <td>{{$authorizacao->autorizacao}}</td>
-        <td>{{$authorizacao->data}}</td>
+        <td>{{date('d-m-Y', strtotime($authorizacao->data))}}</td>
         <td></td>
         <td></td>
       </tr>

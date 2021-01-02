@@ -176,7 +176,7 @@
         <th style="width: 337px;">Finalidade</th>
       </tr>
       <tr>
-        <td rowspan="4">{{$solicitacao->nameroteiro}}</td>
+        <td rowspan="4">{{$solicitacao->origem}} - {{$solicitacao->destino}}</td>
         <td rowspan="4">{{$solicitacao->namefinalidade}}</td>
       </tr>
     </tbody>
@@ -201,10 +201,10 @@
         <td>Hora</td>
       </tr>
       <tr>
-        <td>{{date('yy-m-d', strtotime($solicitacao->datahorasaida))}}</td>
-        <td>{{date('H:i', strtotime($solicitacao->datahorasaida))}}</td>
-        <td>{{date('yy-m-d', strtotime($solicitacao->datahoraretorno))}}</td>
-        <td>{{date('H:i', strtotime($solicitacao->datahoraretorno))}}</td>
+        <td>{{date('d-m-Y', strtotime($solicitacao->datasaida))}}</td>
+        <td>{{date('H:i', strtotime($solicitacao->horasaida))}}</td>
+        <td>{{date('d-m-Y', strtotime($solicitacao->dataretorno))}}</td>
+        <td>{{date('H:i', strtotime($solicitacao->horaretorno))}}</td>
       </tr>
     </tbody>
   </table>
@@ -275,10 +275,10 @@
           <td>Km <br>Final</td>
         </tr>
         <tr>
-          <td>{{date('yy-m-d', strtotime($solicitacao->datahorasaidaautorizada))}}</td>
-          <td>{{date('H:i', strtotime($solicitacao->datahorasaidaautorizada))}}</td>
-          <td>{{date('yy-m-d', strtotime($solicitacao->datahoraretornoautorizada))}}</td>
-          <td>{{date('H:i', strtotime($solicitacao->datahoraretornoautorizada))}}</td>
+          <td>{{date('d-m-Y', strtotime($solicitacao->datasaidaautorizada))}}</td>
+          <td>{{date('H:i', strtotime($solicitacao->horasaidaautorizada))}}</td>
+          <td>{{date('d-m-Y', strtotime($solicitacao->dataretornoautorizada))}}</td>
+          <td>{{date('H:i', strtotime($solicitacao->horaretornoautorizada))}}</td>
           <!-- Implementar lógica de Quilometragem -->
           <td>{{$solicitacao->kminicial}}</td>
           <td>{{$solicitacao->kmfinal}}</td>
@@ -302,7 +302,7 @@
         </tr>
         <tr>
           <td>{{$solicitacao->autorizacao}}</td>
-          <td>{{$solicitacao->data}}</td>
+          <td>{{date('d-m-Y', strtotime($solicitacao->data))}}</td>
           <td></td>
           <td></td>
         </tr>
