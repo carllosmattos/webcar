@@ -92,7 +92,7 @@
         <div class="form-group col-md-2">
           <label class="ls-label col-md-12 @error('data') ls-error @enderror">
             <b class="ls-label-text">Data</b>
-            <input class="ls-no-spin" type="date" name="data" value="{{old('data')}}">
+            <input class="ls-no-spin" type="date" name="data" value="{{old('data')}}" required>
 
             @error('data')
             <div class="ls-help-message">
