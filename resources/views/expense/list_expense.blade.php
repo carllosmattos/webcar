@@ -61,7 +61,7 @@
         <td>{{ $expense->amount}}</td>
         <td>% {{ $expense->discount}}</td>
         <td>R$ {{ $expense->amount_paid}}</td>
-        <td>{{date('d-m-Y', strtotime($solicitacao->data))}} - {{ $expense->hora}}</td>
+        <td>{{date('d-m-Y', strtotime($expense->data))}} - {{ $expense->hora}}</td>
         <td>
           <?php
             $dateNow = date('Y-m-d H:i:s'); //2020-11-26 13:45:29
