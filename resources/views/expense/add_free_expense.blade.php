@@ -89,7 +89,7 @@
 
           </label>
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-2">
           <label class="ls-label col-md-12 @error('data') ls-error @enderror">
             <b class="ls-label-text">Data</b>
             <input class="ls-no-spin" type="date" name="data" value="{{old('data')}}" required>
@@ -102,8 +102,8 @@
 
           </label>
         </div>
-        <div class="form-group col-md-4">
-          <label class="ls-label col-md-6 @error('hora') ls-error @enderror">
+        <div class="form-group col-md-2">
+          <label class="ls-label col-md-12 @error('hora') ls-error @enderror">
             <b class="ls-label-text">Hora</b>
             <input class="ls-no-spin" type="time" name="hora" value="{{old('hora')}}" required>
 
