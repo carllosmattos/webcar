@@ -99,7 +99,7 @@ class AuthorizacaoController extends Controller
 
     $authorizacao->kmfinal                    = $info['kmfinal'];
     $authorizacao->autorizacao                = Auth::user()->name;
-    $authorizacao->data                       = $info['data'];
+    $authorizacao->data                       = date('Y-m-d');
     $authorizacao->statussolicitacao          = $info['statussolicitacao'];
 
     // Cria um custo em Km após status REALIZADA
