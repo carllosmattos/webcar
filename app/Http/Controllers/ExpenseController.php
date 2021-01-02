@@ -81,7 +81,7 @@ class ExpenseController extends Controller
         $expense->amount = $info['amount'];
         $expense->discount  = $info['discount'];
         $expense->data = $info['data'];
-        $expense->data = $info['hora'];
+        $expense->hora = $info['hora'];
         $expense->save();
         return redirect()->route('expenses')->with('message', 'Veiculo alterado com sucesso!');;
     }

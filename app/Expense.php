@@ -36,7 +36,7 @@ class Expense extends Model
     $expense->amount = $field['amount'];
     $expense->discount = $field['discount'];
     $expense->data = $field['data'];
-    $expense->data = $field['hora'];
+    $expense->hora = $field['hora'];
     if (!isset($field['vehicle_id'])) {
       $expense->vehicle_id = 1;
     } else {
