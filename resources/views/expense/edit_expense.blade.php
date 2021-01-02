@@ -97,7 +97,7 @@
         <div class="form-group col-md-2">
           <label class="ls-label col-md-12 @error('data') ls-error @enderror">
             <b class="ls-label-text">Data</b>
-            <input class="ls-no-spin" type="date" name="data" value="{{date('d-m-Y', strtotime($expense->data))}}">
+            <input class="ls-no-spin" type="date" name="data" value="{{date('Y-m-d', strtotime($expense->data))}}">
 
             @error('data')
             <div class="ls-help-message">
