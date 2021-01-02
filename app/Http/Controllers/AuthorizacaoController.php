@@ -115,7 +115,7 @@ class AuthorizacaoController extends Controller
           'unitary_value' => 1,
           'amount' => $amount,
           'discount' => 0,
-          'data' => $info['datahoraretornoautorizada'],
+          'data' => date('Y-m-d'),
           'created_at' => now(),
           'updated_at' => now(),
         ]

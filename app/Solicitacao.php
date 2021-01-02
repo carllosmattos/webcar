@@ -54,7 +54,7 @@ class Solicitacao extends Model
     $solicitacao->kminicial = null;
     $solicitacao->kmfinal = null;
     $solicitacao->autorizacao = ' ';
-    $solicitacao->data = date("Y-m-d");
+    $solicitacao->data = null;
     $solicitacao->statussolicitacao = 'PENDENTE';
 
     $solicitacao->save();

@@ -381,7 +381,7 @@
                     <div class="form-group col-md-3">
                         <label class="ls-label col-md-12 @error('data') ls-error @enderror">
                             <b class="ls-label-text">Data</b>
-                            <input type="date" class="form-control" name="data" placeholder="Data" value="{{$authorizacao->data}}" min="{{date('Y-m-d')}}">
+                            <input type="date" class="form-control" name="data" placeholder="Data" value="{{$authorizacao->data}}" min="{{date('Y-m-d')}}" disabled>
 
                             @error('data')
                             <div class="ls-help-message">
