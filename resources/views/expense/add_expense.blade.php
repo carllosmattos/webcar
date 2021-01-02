@@ -103,7 +103,7 @@
           </label>
         </div>
         <div class="form-group col-md-2">
-          <label class="ls-label col-md-6 @error('hora') ls-error @enderror">
+          <label class="ls-label col-md-12 @error('hora') ls-error @enderror">
             <b class="ls-label-text">Hora</b>
             <input class="ls-no-spin" type="time" name="hora" value="{{old('hora')}}" required>
 
