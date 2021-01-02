@@ -94,7 +94,7 @@
                     <div class="form-group col-md-3">
                         <label class="ls-label col-md-12 @error('datasaida') ls-error @enderror">
                             <b class="ls-label-text">Data da saída</b>
-                            <input type="date" class="form-control" name="datasaida" value="{{date('Y-m-d', strtotime($authorizacao->datasaida))}}">
+                            <input type="date" class="form-control" name="datasaida" value="{{date('Y-m-d', strtotime($authorizacao->datasaida))}}" disabled>
                             <!-- <input type="datetime-local" class="form-control" name="datahorasaida" value="{{date('Y-m-d', strtotime($authorizacao->datahorasaida))}}T{{date('H:i', strtotime($authorizacao->datahorasaida))}}" min="{{date('Y-m-d')}}T{{date('H:i', strtotime('-3 hour', strtotime(date('H:i'))))}}"> -->
                             @error('datasaida')
                             <div class="ls-help-message">
@@ -108,7 +108,7 @@
                     <div class="form-group col-md-3">
                         <label class="ls-label col-md-12 @error('horasaida') ls-error @enderror">
                             <b class="ls-label-text">Hora da saída</b>
-                            <input type="time" class="form-control" name="horasaida" value="{{date('H:i', strtotime($authorizacao->horasaida))}}">
+                            <input type="time" class="form-control" name="horasaida" value="{{date('H:i', strtotime($authorizacao->horasaida))}}" disabled>
 
                             @error('horasaida')
                             <div class="ls-help-message">
@@ -123,7 +123,7 @@
                     <div class="form-group col-md-3">
                         <label class="ls-label col-md-12 @error('dataretorno') ls-error @enderror">
                             <b class="ls-label-text">Data de retorno</b>
-                            <input type="date" class="form-control" name="dataretorno" value="{{date('Y-m-d', strtotime($authorizacao->dataretorno))}}">
+                            <input type="date" class="form-control" name="dataretorno" value="{{date('Y-m-d', strtotime($authorizacao->dataretorno))}}" disabled>
                             @error('dataretorno')
                             <div class="ls-help-message">
                                 {{$message}}
@@ -136,7 +136,7 @@
                     <div class="form-group col-md-3">
                         <label class="ls-label col-md-12 @error('horaretorno') ls-error @enderror">
                             <b class="ls-label-text">Hora do retorno</b>
-                            <input type="time" class="form-control" name="horaretorno" value="{{date('H:i', strtotime($authorizacao->horaretorno))}}">
+                            <input type="time" class="form-control" name="horaretorno" value="{{date('H:i', strtotime($authorizacao->horaretorno))}}" disabled>
 
                             @error('horaretorno')
                             <div class="ls-help-message">
@@ -278,13 +278,17 @@
                 <!-- LIBERAÇÃO de Utilização do Veiculo -->
                 <div class="col-md-12">
                     <div class="form-group col-md-3">
-                        <label class="ls-label col-md-12 @error('datahorasaidaautorizada') ls-error @enderror">
-                            <b class="ls-label-text">Data e hora da saída</b>
-                            <input type="datetime-local" class="form-control" name="datahorasaidaautorizada" @if($authorizacao->datahorasaidaautorizada != null)
+                        <label class="ls-label col-md-12 @error('datasaidaautorizada') ls-error @enderror">
+                            <b class="ls-label-text">Data da saída</b>
+                            <input type="date" class="form-control" name="datasaidaautorizada" @if($authorizacao->datasaidaautorizada != null)
+                            value="{{date('Y-m-d', strtotime($authorizacao->datasaidaautorizada))}}"
+                            @endif>
+                            <!-- <input type="datetime-local" class="form-control" name="datahorasaidaautorizada" @if($authorizacao->datahorasaidaautorizada != null)
                             value="{{date('Y-m-d', strtotime($authorizacao->datahorasaidaautorizada))}}T{{date('H:i', strtotime($authorizacao->datahorasaidaautorizada))}}"
                             @endif
-                            min="{{date('Y-m-d')}}T{{date('H:i', strtotime('-3 hour', strtotime(date('H:i'))))}}">
-                            @error('datahorasaidaautorizada')
+                            min="{{date('Y-m-d')}}T{{date('H:i', strtotime('-3 hour', strtotime(date('H:i'))))}}"> -->
+
+                            @error('datasaidaautorizada')
                             <div class="ls-help-message">
                                 {{$message}}
                             </div>
@@ -294,13 +298,45 @@
                     </div>
 
                     <div class="form-group col-md-3">
-                        <label class="ls-label col-md-12 @error('datahoraretornoautorizada') ls-error @enderror">
-                            <b class="ls-label-text">Data e hora do retorno</b>
-                            <input type="datetime-local" class="form-control" name="datahoraretornoautorizada" @if($authorizacao->datahoraretornoautorizada != null)
-                            value="{{date('Y-m-d', strtotime($authorizacao->datahoraretornoautorizada))}}T{{date('H:i', strtotime($authorizacao->datahoraretornoautorizada))}}"
+                        <label class="ls-label col-md-12 @error('horasaidaautorizada') ls-error @enderror">
+                            <b class="ls-label-text">Hora do retorno</b>
+                            <input type="time" class="form-control" name="horasaidaautorizada" @if($authorizacao->horasaidaautorizada != null)
+                            value="{{date('H:i', strtotime($authorizacao->horasaidaautorizada))}}"
                             @endif>
 
-                            @error('datahoraretornoautorizada')
+                            @error('horasaidaautorizada')
+                            <div class="ls-help-message">
+                                {{$message}}
+                            </div>
+                            @enderror
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group col-md-3">
+                        <label class="ls-label col-md-12 @error('dataretornoautorizada') ls-error @enderror">
+                            <b class="ls-label-text">Data do retorno</b>
+                            <input type="date" class="form-control" name="dataretornoautorizada" @if($authorizacao->dataretornoautorizada != null)
+                            value="{{date('Y-m-d', strtotime($authorizacao->dataretornoautorizada))}}"
+                            @endif
+                            min="{{date('Y-m-d')}}T{{date('H:i', strtotime('-3 hour', strtotime(date('H:i'))))}}">
+                            @error('dataretornoautorizada')
+                            <div class="ls-help-message">
+                                {{$message}}
+                            </div>
+                            @enderror
+
+                        </label>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <label class="ls-label col-md-12 @error('horaretornoautorizada') ls-error @enderror">
+                            <b class="ls-label-text">Hora do retorno</b>
+                            <input type="time" class="form-control" name="horaretornoautorizada" @if($authorizacao->horaretornoautorizada != null)
+                            value="{{date('Y-m-d', strtotime($authorizacao->horaretornoautorizada))}}T{{date('H:i', strtotime($authorizacao->horaretornoautorizada))}}"
+                            @endif>
+
+                            @error('horaretornoautorizada')
                             <div class="ls-help-message">
                                 {{$message}}
                             </div>

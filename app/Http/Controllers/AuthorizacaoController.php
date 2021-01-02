@@ -86,8 +86,10 @@ class AuthorizacaoController extends Controller
         'driver_id' => $driver->id,
       ]
     );
-    $authorizacao->datahorasaidaautorizada    = $info['datahorasaidaautorizada'];
-    $authorizacao->datahoraretornoautorizada  = $info['datahoraretornoautorizada'];
+    $authorizacao->datasaidaautorizada    = $info['datasaidaautorizada'];
+    $authorizacao->horasaidaautorizada    = $info['horasaidaautorizada'];
+    $authorizacao->dataretornoautorizada  = $info['dataretornoautorizada'];
+    $authorizacao->horaretornoautorizada  = $info['horaretornoautorizada'];
 
     // Pega o carro selecionado e sua Km e registra em Km inicial na tabela solicitacoes
     $kmcar = DB::table('vehicles')->where('id', $info['veiculo'])->get('km');

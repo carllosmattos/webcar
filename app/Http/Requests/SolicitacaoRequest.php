@@ -32,7 +32,6 @@ class SolicitacaoRequest extends FormRequest
             'datasaida'         => 'required',
             'horasaida'         => 'required',
             'dataretorno'       => 'required|date|after_or_equal:datasaida',
-            'horaretorno'       => 'required|date_format:H:i|after_or_equal:horasaida',
             'nameusuario'       => 'required',
         ];
     }
@@ -56,7 +55,6 @@ class SolicitacaoRequest extends FormRequest
             'dataretorno.required'       => 'Insira uma data de retorno mesmo que não necessite retornar.',
             'horaretorno.required'       => 'Insira uma hora de retorno mesmo que não necessite retornar.',
             'dataretorno.after_or_equal' => 'Desculpe! Não possuímos um DeLorean? A data retorno não podem ser anterior à data e hora de saída.',
-            'horaretorno.after_or_equal' => 'Desculpe! Não possuímos um DeLorean? A hora de retorno não podem ser anterior à data e hora de saída.',
             'nameusuario.required'       => 'Por favor informe o mome do solicitante ou paciente.',
         ];
     }

@@ -47,9 +47,7 @@ class Authorizacao extends Model
     $authorizacao->veiculo = $field['veiculo'];
     $authorizacao->datahorasaidaautorizada = $field['datahorasaidaautorizada'];
     $authorizacao->datahoraretornoautorizada = $field['datahoraretornoautorizada'];
-    // $authorizacao->kminicial= $field['kminicial'];
     $authorizacao->kmfinal= $field['kmfinal'];
-    // $authorizacao->autorizacao = $field['autorizacao'];
     $authorizacao->data = $field['data'];
     $authorizacao->statussolicitacao = $field['statussolicitacao'];
 
