@@ -84,7 +84,7 @@
       </div>
       <div class="ls-box-body">
         <strong>{{ App\Solicitacao::where('statussolicitacao', 'PENDENTE')
-                    ->where('datahorasaida', '>', date('Y-m-d', mktime(0, 0, 0, date('m') , 1 , date('Y'))))
+                    ->where('datasaida', '>', date('Y-m-d', mktime(0, 0, 0, date('m') , 1 , date('Y'))))
                     ->where('user_id', auth()->user()->id)->count() }}</strong>
       </div>
       <div class="ls-box-footer">
@@ -112,7 +112,7 @@
       </div>
       <div class="ls-box-body">
         <strong>{{ App\Authorizacao::where('statussolicitacao', 'PENDENTE')
-            ->where('datahorasaida', '>', date('Y-m-d', mktime(0, 0, 0, date('m') , 1 , date('Y'))))
+            ->where('datasaida', '>', date('Y-m-d', mktime(0, 0, 0, date('m') , 1 , date('Y'))))
             ->count() }}</strong>
       </div>
       <div class="ls-box-footer">
@@ -140,7 +140,7 @@
       </div>
       <div class="ls-box-body">
         <strong>{{ App\Authorizacao::where('statussolicitacao', 'REALIZADA')
-            ->where('datahorasaida', '>', date('Y-m-d', mktime(0, 0, 0, date('m') , 1 , date('Y'))))
+            ->where('datasaida', '>', date('Y-m-d', mktime(0, 0, 0, date('m') , 1 , date('Y'))))
             ->count() }}</strong>
       </div>
       <div class="ls-box-footer">
@@ -167,7 +167,7 @@
       </div>
       <div class="ls-box-body">
         <strong>{{ App\Solicitacao::where('statussolicitacao', 'REALIZADA')
-                    ->where('datahorasaida', '>', date('Y-m-d', mktime(0, 0, 0, date('m') , 1 , date('Y'))))
+                    ->where('datasaida', '>', date('Y-m-d', mktime(0, 0, 0, date('m') , 1 , date('Y'))))
                     ->where('user_id', auth()->user()->id)->count() }}</strong>
       </div>
       <div class="ls-box-footer">
