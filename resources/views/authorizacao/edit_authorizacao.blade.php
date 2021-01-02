@@ -333,7 +333,7 @@
                         <label class="ls-label col-md-12 @error('horaretornoautorizada') ls-error @enderror">
                             <b class="ls-label-text">Hora do retorno</b>
                             <input type="time" class="form-control" name="horaretornoautorizada" @if($authorizacao->horaretornoautorizada != null)
-                            value="{{date('Y-m-d', strtotime($authorizacao->horaretornoautorizada))}}T{{date('H:i', strtotime($authorizacao->horaretornoautorizada))}}"
+                            value="{{date('H:i', strtotime($authorizacao->horaretornoautorizada))}}"
                             @endif>
 
                             @error('horaretornoautorizada')
