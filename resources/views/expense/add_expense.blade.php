@@ -76,10 +76,10 @@
       </div>
 
       <div class="col-md-12">
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-2">
           <label class="ls-label col-md-12 @error('discount') ls-error @enderror">
             <b class="ls-label-text">Desconto (%):</b>
-            <input type="number" min="0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" name="discount" value="{{old('discount')}}">
+            <input type="number" min="0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 28 && event.charCode <= 57" name="discount" value="{{old('discount')}}">
 
             @error('discount')
             <div class="ls-help-message">
@@ -89,8 +89,8 @@
 
           </label>
         </div>
-        <div class="form-group col-md-4">
-          <label class="ls-label col-md-6 @error('data') ls-error @enderror">
+        <div class="form-group col-md-2">
+          <label class="ls-label col-md-12 @error('data') ls-error @enderror">
             <b class="ls-label-text">Data</b>
             <input class="ls-no-spin" type="date" name="data" value="{{old('data')}}">
 
@@ -104,8 +104,8 @@
         </div>
         <div class="form-group col-md-4">
           <label class="ls-label col-md-6 @error('hora') ls-error @enderror">
-            <b class="ls-label-text">Data</b>
-            <input class="ls-no-spin" type="time" name="data" value="{{old('hora')}}">
+            <b class="ls-label-text">Hora</b>
+            <input class="ls-no-spin" type="time" name="hora" value="{{old('hora')}}" required>
 
             @error('hora')
             <div class="ls-help-message">
