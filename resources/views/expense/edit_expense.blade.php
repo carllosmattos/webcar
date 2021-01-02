@@ -94,12 +94,25 @@
 
           </label>
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-2">
           <label class="ls-label col-md-12 @error('data') ls-error @enderror">
             <b class="ls-label-text">Data</b>
-            <input class="ls-no-spin" type="datetime-local" name="data" value="{{date('Y-m-d', strtotime($expense->data))}}T{{date('H:i', strtotime($expense->data))}}">
+            <input class="ls-no-spin" type="date" name="data" value="{{date('d-m-Y', strtotime($expense->data))}}">
 
             @error('data')
+            <div class="ls-help-message">
+              {{$message}}
+            </div>
+            @enderror
+
+          </label>
+        </div>
+        <div class="form-group col-md-2">
+          <label class="ls-label col-md-12 @error('hora') ls-error @enderror">
+            <b class="ls-label-text">Hora</b>
+            <input class="ls-no-spin" type="time" name="hora" value="{{date('H:i', strtotime($expense->hora))}}">
+
+            @error('hora')
             <div class="ls-help-message">
               {{$message}}
             </div>
