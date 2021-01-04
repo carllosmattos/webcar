@@ -116,6 +116,7 @@ class AuthorizacaoController extends Controller
           'amount' => $amount,
           'discount' => 0,
           'data' => date('Y-m-d'),
+	  'hora' => date('H:i:s'),
           'created_at' => now(),
           'updated_at' => now(),
         ]
