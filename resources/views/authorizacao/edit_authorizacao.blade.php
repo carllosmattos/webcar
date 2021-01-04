@@ -299,7 +299,7 @@
 
                     <div class="form-group col-md-3">
                         <label class="ls-label col-md-12 @error('horasaidaautorizada') ls-error @enderror">
-                            <b class="ls-label-text">Hora do retorno</b>
+                            <b class="ls-label-text">Hora da saida</b>
                             <input type="time" class="form-control" name="horasaidaautorizada" @if($authorizacao->horasaidaautorizada != null)
                             value="{{date('H:i', strtotime($authorizacao->horasaidaautorizada))}}"
                             @endif>
