@@ -113,4 +113,6 @@
   </table>
 </div>
 
+{{ $authorizacoes->links() }}
+
 @stop
