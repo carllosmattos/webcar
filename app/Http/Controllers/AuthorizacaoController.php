@@ -43,12 +43,12 @@ class AuthorizacaoController extends Controller
   {
     if (!is_null($field['statussolicitacao'])) {
       $aut = Solicitacao::where('statussolicitacao', 'LIKE', '%' . $field['statussolicitacao'] . '%')
-        ->orderBy('id', 'DESC')->paginate(10);
+        ->orderBy('id', 'DESC')->paginate(20);
     } elseif (!is_null($field['namesolicitante'])) {
       $aut = Solicitacao::where('namesolicitante', 'LIKE', '%' . $field['namesolicitante'] . '%')
-        ->orderBy('id', 'DESC')->paginate(10);
+        ->orderBy('id', 'DESC')->paginate(20);
     } else {
-      $aut = Solicitacao::orderby('id', 'desc')->paginate(10);
+      $aut = Solicitacao::orderby('id', 'desc')->paginate(20);
     }
     
     return view('authorizacao/list_authorizacao', compact('aut'));
