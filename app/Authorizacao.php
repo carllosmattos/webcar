@@ -27,7 +27,7 @@ class Authorizacao extends Model
 
   public function getAuthorizacoes()
   {
-    $authorizacoes = Authorizacao::all();
+    $authorizacoes = Authorizacao::paginate(10);
     return $authorizacoes;
   }
 
