@@ -109,9 +109,9 @@
     </td>
   </tr>
   @endforeach
-  {{ $aut->links() }}
   </tbody>
   </table>
+  {{ $aut->links() }}
 </div>
 
 
