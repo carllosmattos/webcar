@@ -15,10 +15,10 @@ class Authorizacao extends Model
   {
     if (!is_null($field['statussolicitacao'])) {
       $authorizacao = Solicitacao::where('statussolicitacao', 'LIKE', '%' . $field['statussolicitacao'] . '%')
-        ->orderBy('id', 'DESC')->get();
+        ->orderBy('id', 'DESC')->paginate(10);
     } elseif (!is_null($field['namesolicitante'])) {
       $authorizacao = Solicitacao::where('namesolicitante', 'LIKE', '%' . $field['namesolicitante'] . '%')
-        ->orderBy('id', 'DESC')->get();
+        ->orderBy('id', 'DESC')->paginate(10);
     }
 
     return $authorizacao;
