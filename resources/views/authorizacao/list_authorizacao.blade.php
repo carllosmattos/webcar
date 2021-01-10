@@ -44,65 +44,65 @@
       </thead>
       <tbody>
   </div>
-  @foreach ($authorizacao as $authorizacao)
+  @foreach ($authorizacao as $result)
   <tr>
     @inject('sectors', '\App\Sector')
     @foreach($sectors->getSectors() as $sectors)
-    @if($sectors->cc === $authorizacao->namesolicitante)
+    @if($sectors->cc === $result->namesolicitante)
     <td>{{ $sectors->cc }} - {{ $sectors->sector }}</td>
     @else
     @endif
     @endforeach
-    <td>{{ $authorizacao->origem }} - {{ $authorizacao->destino }}</td>
-    <td>{{ $authorizacao->namefinalidade }}</td>
-    <td>Data: {{date('d-m-Y', strtotime($authorizacao->datasaida))}} </br>Hora: {{date('H:i', strtotime($authorizacao->horasaida))}}</td>
-    <td>Data: {{date('d-m-Y', strtotime($authorizacao->dataretorno))}} </br>Hora: {{date('H:i', strtotime($authorizacao->horaretorno))}}</td>
-    <td>{{ $authorizacao->nameusuario }}</td>
+    <td>{{ $result->origem }} - {{ $result->destino }}</td>
+    <td>{{ $result->namefinalidade }}</td>
+    <td>Data: {{date('d-m-Y', strtotime($result->datasaida))}} </br>Hora: {{date('H:i', strtotime($result->horasaida))}}</td>
+    <td>Data: {{date('d-m-Y', strtotime($result->dataretorno))}} </br>Hora: {{date('H:i', strtotime($result->horaretorno))}}</td>
+    <td>{{ $result->nameusuario }}</td>
 
     <td> 
-    @if($authorizacao->name_driver == " ")
+    @if($result->name_driver == " ")
       Não atribuído
     @else
-      {{ $authorizacao->name_driver}}
+      {{ $result->name_driver}}
     @endif
     </br> 
-    @if($authorizacao->veiculo == 2)
+    @if($result->veiculo == 2)
       Não atribuído
     @else
       @inject('vehicles', '\App\Vehicle')
       @foreach($vehicles->getVehicles() as $vehicle)
-        @if($vehicle->id == $authorizacao->veiculo)
+        @if($vehicle->id == $result->veiculo)
           {{ $vehicle->brand }} {{$vehicle->model}} - {{$vehicle->placa}}
         @endif
       @endforeach
     @endif
     </td>
 
-    @if($authorizacao->statussolicitacao == "PENDENTE")
-    <td><label class="ls-ico-history" style="color: red;"> {{ $authorizacao->statussolicitacao }}</label></td>
-    @elseif($authorizacao->statussolicitacao == "AUTORIZADA")
-    <td><label class="ls-ico-thumbs-up" style="color: green;"> {{ $authorizacao->statussolicitacao }}</label></td>
-    @elseif($authorizacao->statussolicitacao == "REALIZADA")
-    <td><label class="ls-ico-checkmark" style="color: Mediumaquamarine;"> {{ $authorizacao->statussolicitacao }}</label></td>
+    @if($result->statussolicitacao == "PENDENTE")
+    <td><label class="ls-ico-history" style="color: red;"> {{ $result->statussolicitacao }}</label></td>
+    @elseif($result->statussolicitacao == "AUTORIZADA")
+    <td><label class="ls-ico-thumbs-up" style="color: green;"> {{ $result->statussolicitacao }}</label></td>
+    @elseif($result->statussolicitacao == "REALIZADA")
+    <td><label class="ls-ico-checkmark" style="color: Mediumaquamarine;"> {{ $result->statussolicitacao }}</label></td>
     @else
-    <td><label class="ls-ico-bukets" style="color: blue;"> {{ $authorizacao->statussolicitacao }}</label></td>
+    <td><label class="ls-ico-bukets" style="color: blue;"> {{ $result->statussolicitacao }}</label></td>
     @endif
     <td>
       <div class="col-md-12">
         <div class="col-md-4">
-          @if($authorizacao->statussolicitacao == "AUTORIZADA" || $authorizacao->statussolicitacao == "PENDENTE")
-          <a class="ls-ico-pencil ls-btn-dark" style="background-color: blue;" href="{{ route('authorizacao.edit', $authorizacao->id) }}"></a>
+          @if($result->statussolicitacao == "AUTORIZADA" || $result->statussolicitacao == "PENDENTE")
+          <a class="ls-ico-pencil ls-btn-dark" style="background-color: blue;" href="{{ route('result.edit', $result->id) }}"></a>
           @else
           @endif
         </div>
         <div class="col-md-4">
-          @if($authorizacao->statussolicitacao == "PENDENTE")
-          <a class="ls-ico-remove ls-btn-primary-danger" href="{{ route('authorizacao.delete', $authorizacao->id) }}"></a>
+          @if($result->statussolicitacao == "PENDENTE")
+          <a class="ls-ico-remove ls-btn-primary-danger" href="{{ route('result.delete', $result->id) }}"></a>
           @else
           @endif
         </div>
         <div class="col-md-4">
-          <a class="ls-ico-windows ls-btn" href="{{ route('updf', $authorizacao->id) }}"></a>
+          <a class="ls-ico-windows ls-btn" href="{{ route('updf', $result->id) }}"></a>
         </div>
       </div>
 
