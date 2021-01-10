@@ -10,27 +10,6 @@ class Authorizacao extends Model
   protected $table = "solicitacoes";
   protected $fillable = ['namesolicitante', ];
 
-
-  // public function getAuthorizacao($field)
-  // {
-  //   if (!is_null($field['statussolicitacao'])) {
-  //     $authorizacao = Solicitacao::where('statussolicitacao', 'LIKE', '%' . $field['statussolicitacao'] . '%')
-  //       ->orderBy('id', 'DESC')->paginate(10);
-  //   } elseif (!is_null($field['namesolicitante'])) {
-  //     $authorizacao = Solicitacao::where('namesolicitante', 'LIKE', '%' . $field['namesolicitante'] . '%')
-  //       ->orderBy('id', 'DESC')->paginate(10);
-  //   }
-
-  //   return $authorizacao;
-  // }
-
-
-  // public function getAuthorizacoes()
-  // {
-  //   $authorizacoes = Authorizacao::paginate(10);
-  //   return $authorizacoes;
-  // }
-
   public function addAuthorizacao($field)
   {
     $authorizacao = new Authorizacao();
