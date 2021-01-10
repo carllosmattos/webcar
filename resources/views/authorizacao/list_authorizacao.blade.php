@@ -37,7 +37,7 @@
           <th>Finalidade</th>
           <th>Saída</th>
           <th>Retorno</th>
-          <th>Nome dos Usuários</th>
+          <!-- <th>Nome dos Usuários</th> -->
           <th>Motorista | Veículo</th>
           <th>Status</th>
           <th>Ação</th>
@@ -49,7 +49,7 @@
   <tr>
     @inject('sectors', '\App\Sector')
     @foreach($sectors->getSectors() as $sectors)
-    @if($sectors->cc === $result->namesolicitante)
+    <!-- @if($sectors->cc === $result->namesolicitante) -->
     <td>{{ $sectors->cc }} - {{ $sectors->sector }}</td>
     @else
     @endif
