@@ -52,7 +52,7 @@ class AuthorizacaoController extends Controller
   //--------------------- Listar Autorização----------------------//
   public function list_authorizacoes()
   {
-    $authorizacoes = $this->authorizacoes->get()->sortByDesc("id");
+    $authorizacoes = $this->authorizacoes->paginate(10)->sortByDesc("id");
     return view('authorizacao/list_authorizacao', compact('authorizacoes'));
   }
   //------------------------------------------------------------//
