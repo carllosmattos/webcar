@@ -91,7 +91,7 @@
       <div class="col-md-12">
         <div class="col-md-4">
           @if($result->statussolicitacao == "AUTORIZADA" || $result->statussolicitacao == "PENDENTE")
-          <a class="ls-ico-pencil ls-btn-dark" style="background-color: blue;" href="{{ route('result.edit', $result->id) }}"></a>
+          <a class="ls-ico-pencil ls-btn-dark" style="background-color: blue;" href="{{ route('authorizacao.edit', $result->id) }}"></a>
           @else
           @endif
         </div>
