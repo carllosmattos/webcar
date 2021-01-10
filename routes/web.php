@@ -91,7 +91,7 @@ Route::group(['middleware' => ['auth', 'superAdm']], function () {
     Route::get('/authorizacao', function () {
         return redirect()->route('authorizacoes');
     });
-    Route::post('/authorizacoes', 'AuthorizacaoController@post_list_authorizacao')->name('authorizacao.list');
+    // Route::post('/authorizacoes', 'AuthorizacaoController@post_list_authorizacao')->name('authorizacao.list');
     Route::get('/authorizacoes', 'AuthorizacaoController@list_authorizacoes')->name('authorizacoes');
 
     //ROTAS PARA EDITAR Autorização

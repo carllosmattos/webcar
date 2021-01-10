@@ -38,23 +38,32 @@ class AuthorizacaoController extends Controller
   {
   }
 
-  public function post_list_authorizacao(Request $field)
-  {
-    if (!is_null($field['statussolicitacao']) || !is_null($field['namesolicitante'])) {
-      $authorizacoes = Authorizacao::where('statussolicitacao', 'LIKE', '%' . $field['statussolicitacao'] . '%')
-        ->orderBy('id', 'DESC')->paginate(10);
-    } else {
-      $authorizacoes = Authorizacao::where('namesolicitante', 'LIKE', '%' . $field['namesolicitante'] . '%')
-        ->orderBy('id', 'DESC')->paginate(10);
-    }
-    return view('authorizacao/list_authorizacao', compact('authorizacoes'));
-  }
+  // public function post_list_authorizacao(Request $field)
+  // {
+  //   if (!is_null($field['statussolicitacao']) || !is_null($field['namesolicitante'])) {
+  //     $authorizacoes = Authorizacao::where('statussolicitacao', 'LIKE', '%' . $field['statussolicitacao'] . '%')
+  //       ->orderBy('id', 'DESC')->paginate(10);
+  //   } else {
+  //     $authorizacoes = Authorizacao::where('namesolicitante', 'LIKE', '%' . $field['namesolicitante'] . '%')
+  //       ->orderBy('id', 'DESC')->paginate(10);
+  //   }
+  //   return view('authorizacao/list_authorizacao', compact('authorizacoes'));
+  // }
   //------------------------------------------------------------//
 
   //--------------------- Listar Autorização----------------------//
-  public function list_authorizacoes()
+  public function list_authorizacoes(Request $field)
   {
-    $authorizacoes = Authorizacao::orderby('id', 'desc')->paginate(10);
+    if (!is_null($field['statussolicitacao'])) {
+      $authorizacoes = Authorizacao::where('statussolicitacao', 'LIKE', '%' . $field['statussolicitacao'] . '%')
+        ->orderBy('id', 'DESC')->paginate(10);
+    } elseif (!is_null($field['namesolicitante'])) {
+      $authorizacoes = Authorizacao::where('namesolicitante', 'LIKE', '%' . $field['namesolicitante'] . '%')
+        ->orderBy('id', 'DESC')->paginate(10);
+    } else {
+      $authorizacoes = Authorizacao::orderby('id', 'desc')->paginate(10);
+    }
+    
     return view('authorizacao/list_authorizacao', compact('authorizacoes'));
   }
   //------------------------------------------------------------//

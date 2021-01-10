@@ -7,7 +7,7 @@
 
     <div class="box-header">
       <h5 class="ls-title">Listar Autorização</h5>
-      <form method="post" action="{{ route('authorizacao.list') }}" class="form form-inline col-md-6" style="margin-bottom: 10px;">
+      <form method="post" action="{{ route('authorizacoes') }}" class="form form-inline col-md-6" style="margin-bottom: 10px;">
         <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
         <fieldset>
           <label class="ls-label col-md-12">
