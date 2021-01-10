@@ -48,7 +48,7 @@
   <tr>
     @inject('sectors', '\App\Sector')
     @foreach($sectors->getSectors() as $sectors)
-    <!-- @if($sectors->cc === $authorizacao->namesolicitante) -->
+    @if($sectors->cc === $authorizacao->namesolicitante)
     <td>{{ $sectors->cc }} - {{ $sectors->sector }}</td>
     @else
     @endif
@@ -57,7 +57,7 @@
     <td>{{ $authorizacao->namefinalidade }}</td>
     <td>Data: {{date('d-m-Y', strtotime($authorizacao->datasaida))}} </br>Hora: {{date('H:i', strtotime($authorizacao->horasaida))}}</td>
     <td>Data: {{date('d-m-Y', strtotime($authorizacao->dataretorno))}} </br>Hora: {{date('H:i', strtotime($authorizacao->horaretorno))}}</td>
-    <td>{{ $authorizacao->nameusuario }}</td>
+    <!-- <td>{{ $authorizacao->nameusuario }}</td> -->
 
     <td> 
     @if($authorizacao->name_driver == " ")

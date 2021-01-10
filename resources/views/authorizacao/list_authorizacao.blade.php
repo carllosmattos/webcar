@@ -49,7 +49,7 @@
   <tr>
     @inject('sectors', '\App\Sector')
     @foreach($sectors->getSectors() as $sectors)
-    <!-- @if($sectors->cc === $result->namesolicitante) -->
+    @if($sectors->cc === $result->namesolicitante)
     <td>{{ $sectors->cc }} - {{ $sectors->sector }}</td>
     @else
     @endif
@@ -58,7 +58,7 @@
     <td>{{ $result->namefinalidade }}</td>
     <td>Data: {{date('d-m-Y', strtotime($result->datasaida))}} </br>Hora: {{date('H:i', strtotime($result->horasaida))}}</td>
     <td>Data: {{date('d-m-Y', strtotime($result->dataretorno))}} </br>Hora: {{date('H:i', strtotime($result->horaretorno))}}</td>
-    <td>{{ $result->nameusuario }}</td>
+    <!-- <td>{{ $result->nameusuario }}</td> -->
 
     <td> 
     @if($result->name_driver == " ")
