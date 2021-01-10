@@ -97,7 +97,7 @@
         </div>
         <div class="col-md-4">
           @if($result->statussolicitacao == "PENDENTE")
-          <a class="ls-ico-remove ls-btn-primary-danger" href="{{ route('result.delete', $result->id) }}"></a>
+          <a class="ls-ico-remove ls-btn-primary-danger" href="{{ route('authorizacao.delete', $result->id) }}"></a>
           @else
           @endif
         </div>
