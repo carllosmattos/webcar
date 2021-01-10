@@ -41,16 +41,16 @@ class AuthorizacaoController extends Controller
   public function post_list_authorizacao(Request $field)
   {
     if (!is_null($field['statussolicitacao'])) {
-      $authorizacao = Authorizacao::where('statussolicitacao', 'LIKE', '%' . $field['statussolicitacao'] . '%')
+      $aut = Authorizacao::where('statussolicitacao', 'LIKE', '%' . $field['statussolicitacao'] . '%')
         ->orderBy('id', 'DESC')->paginate(10);
     } elseif (!is_null($field['namesolicitante'])) {
-      $authorizacao = Authorizacao::where('namesolicitante', 'LIKE', '%' . $field['namesolicitante'] . '%')
+      $aut = Authorizacao::where('namesolicitante', 'LIKE', '%' . $field['namesolicitante'] . '%')
         ->orderBy('id', 'DESC')->paginate(10);
     } else {
-      $authorizacao = Authorizacao::orderby('id', 'desc')->paginate(10);
+      $aut = Authorizacao::orderby('id', 'desc')->paginate(10);
     }
     
-    return view('authorizacao/list_authorizacao', compact('authorizacao'));
+    return view('authorizacao/list_authorizacao', compact('aut'));
   }
   //------------------------------------------------------------//
 
