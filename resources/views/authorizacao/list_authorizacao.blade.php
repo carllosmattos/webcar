@@ -108,12 +108,12 @@
 
     </td>
   </tr>
-  
-  {{ $aut->links() }}
   @endforeach
   </tbody>
   </table>
 </div>
+
+{{ $aut->links() }}
 
 
 @stop
