@@ -42,11 +42,11 @@ class AuthorizacaoController extends Controller
   {
     if (!is_null($field['statussolicitacao']) || !is_null($field['namesolicitante'])) {
       // $authorizacoes = $this->authorizacao->getauthorizacao($field);
-      $authorizacao = Solicitacao::where('statussolicitacao', 'LIKE', '%' . $field['statussolicitacao'] . '%')
+      $authorizacao = Authorizacao::where('statussolicitacao', 'LIKE', '%' . $field['statussolicitacao'] . '%')
         ->orderBy('id', 'DESC')->paginate(10);
     } else {
       // $authorizacoes = $this->authorizacoes->getAuthorizacoes();
-      $authorizacao = Solicitacao::where('namesolicitante', 'LIKE', '%' . $field['namesolicitante'] . '%')
+      $authorizacao = Authorizacao::where('namesolicitante', 'LIKE', '%' . $field['namesolicitante'] . '%')
         ->orderBy('id', 'DESC')->paginate(10);
     }
     return view('authorizacao/list_authorizacao', compact('authorizacoes'));
