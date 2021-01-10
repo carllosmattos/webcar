@@ -44,7 +44,7 @@
       </thead>
       <tbody>
   </div>
-  @foreach ($authorizacao as $authorizacao)
+  @foreach ($authorizacoes as $authorizacao)
   <tr>
     @inject('sectors', '\App\Sector')
     @foreach($sectors->getSectors() as $sectors)
@@ -113,6 +113,6 @@
   </table>
 </div>
 
-{{ $authorizacao->links() }}
+{{ $authorizacoes->links() }}
 
 @stop
