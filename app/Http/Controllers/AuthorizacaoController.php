@@ -56,7 +56,7 @@ class AuthorizacaoController extends Controller
   //--------------------- Listar Autorização----------------------//
   public function list_authorizacoes()
   {
-    $authorizacoes = Authorizacao::sortByDesc("id")->paginate(10);
+    $authorizacoes = Authorizacao::paginate(10)->orderby('id', 'asc');
     return view('authorizacao/list_authorizacao', compact('authorizacoes'));
   }
   //------------------------------------------------------------//
