@@ -34,26 +34,6 @@ class AuthorizacaoController extends Controller
     return redirect()->route('authorizacoes')->with('message', 'Autorização adicionada com sucesso!');;
   }
   //------------------------------------------------------------//
-  //---------------- Listar Autorização Específico -----------------//
-  public function get_list_authorizacao()
-  {
-  }
-
-  public function post_list_authorizacao(Request $field)
-  {
-    if (!is_null($field['statussolicitacao'])) {
-      $aut = Solicitacao::where('statussolicitacao', 'LIKE', '%' . $field['statussolicitacao'] . '%')
-        ->orderBy('id', 'DESC')->paginate(20);
-    } elseif (!is_null($field['namesolicitante'])) {
-      $aut = Solicitacao::where('namesolicitante', 'LIKE', '%' . $field['namesolicitante'] . '%')
-        ->orderBy('id', 'DESC')->paginate(20);
-    } else {
-      $aut = Solicitacao::orderby('id', 'desc')->paginate(20);
-    }
-    
-    return view('authorizacao/list_authorizacao', compact('aut'));
-  }
-  //------------------------------------------------------------//
 
   //--------------------- Listar Autorização----------------------//
   public function list_authorizacoes(Request $field)
@@ -62,6 +42,23 @@ class AuthorizacaoController extends Controller
     return view('authorizacao/list_authorizacoes', compact('authorizacoes'));
   }
   //------------------------------------------------------------//
+
+    //---------------- Listar Autorização Específico -----------------//
+    public function post_list_authorizacao(Request $field)
+    {
+      if (!is_null($field['statussolicitacao'])) {
+        $aut = Solicitacao::where('statussolicitacao', 'LIKE', '%' . $field['statussolicitacao'] . '%')
+          ->orderBy('id', 'DESC')->paginate(20);
+      } elseif (!is_null($field['namesolicitante'])) {
+        $aut = Solicitacao::where('namesolicitante', 'LIKE', '%' . $field['namesolicitante'] . '%')
+          ->orderBy('id', 'DESC')->paginate(20);
+      } else {
+        $aut = Solicitacao::orderby('id', 'desc')->paginate(20);
+      }
+      
+      return view('authorizacao/list_authorizacao', compact('aut'));
+    }
+    //------------------------------------------------------------//
 
   //-------------------- Editar Autorização --------------------//
   public function get_edit_authorizacao($id)
