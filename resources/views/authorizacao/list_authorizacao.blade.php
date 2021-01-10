@@ -21,7 +21,6 @@
             <div class="col-col-md-3">
               <button type="submit" class="btn btn-primary">Pesquisar</button>
             </div>
-  {{ $aut->links() }}
           </label>
         </fieldset>
       </form>
@@ -109,6 +108,8 @@
 
     </td>
   </tr>
+  
+  {{ $aut->links() }}
   @endforeach
   </tbody>
   </table>
