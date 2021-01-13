@@ -33,7 +33,7 @@ class Vehicle extends Model
     $vehicle->model = $field['model'];
     $vehicle->placa = $field['placa'];
     $vehicle->year = $field['year'];
-    $vehicle->km = $field['km'];
+    // $vehicle->km = $field['km'];
     $vehicle->situacao = $field['situacao'];
     $vehicle->descricao = $field['descricao'];
 

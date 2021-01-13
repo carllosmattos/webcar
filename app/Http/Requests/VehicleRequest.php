@@ -44,7 +44,7 @@ class VehicleRequest extends FormRequest
                     }
                 },
             ],
-            'km'  => 'required',
+            // 'km'  => 'required',
             'situacao'  => 'required',
             'descricao'  => 'required',
         ];
@@ -67,7 +67,7 @@ class VehicleRequest extends FormRequest
             'year.min'          => 'O ano não pode ser menor do que 4 digitos',
             'year.max'          => 'O ano não pode ser maior do que 4 digitos',
             'year.numeric'      => 'O campo deve conter apenas números no padrão YYYY',
-            'km.required'                => 'Por favor informe a quilometragem atual do veículo',
+            // 'km.required'                => 'Por favor informe a quilometragem atual do veículo',
             'situacao.required' => 'Por favor informe a situação do veículo.',
             'descricao.required' => 'Informe alguma descrição sobre a situação do veiculo.',
         ];
