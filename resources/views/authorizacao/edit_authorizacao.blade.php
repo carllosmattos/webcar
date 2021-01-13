@@ -347,7 +347,6 @@
                 <!-- LIBERAÇÃO de Utilização do Veiculo -->
 
                 <div id="mileage" class="col-md-12" style="display: none">
-                    <h6 class="ls-title-6">Quilometragem</h6>
                     <div class="form-group col-md-3">
                         <label class="ls-label col-md-12 @error('kminicial') ls-error @enderror">
                             <b class="ls-label-text">Quilometragem inicial</b>
@@ -357,7 +356,7 @@
                     
                     <div class="form-group col-md-3">
                         <label class="ls-label col-md-12 @error('kmfinal') ls-error @enderror">
-                            <b class="ls-label-text" style="font-size: 10px; color: red">Quilometragem final</b>
+                            <b class="ls-label-text">Quilometragem final</b>
                             <input type="text" id="kmfinal" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" name="kmfinal" maxlength="6" autocomplete="off" value="{{$authorizacao->kmfinal}}">
                         </label>
                     </div>
