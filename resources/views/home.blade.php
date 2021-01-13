@@ -1,4 +1,4 @@
-@extends('layouts.app')
+<!-- @extends('layouts.app')
 @section('content')
 
 <div style="margin-left: auto; margin-right: auto; width: 20em">
@@ -8,7 +8,7 @@
 </div>
 
 
-@endsection
+@endsection -->
 
 
 
@@ -21,7 +21,7 @@
 
 
 
-<!-- ################################# H O M E #############################################
+################################# H O M E #############################################
 @extends('layouts.application')
 
 @section('content')
@@ -216,4 +216,4 @@
 
 
 
-@endsection -->
+@endsection
