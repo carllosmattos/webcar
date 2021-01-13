@@ -93,13 +93,7 @@ class AuthorizacaoController extends Controller
     $authorizacao->horasaidaautorizada    = $info['horasaidaautorizada'];
     $authorizacao->dataretornoautorizada  = $info['dataretornoautorizada'];
     $authorizacao->horaretornoautorizada  = $info['horaretornoautorizada'];
-
-    // Pega o carro selecionado e sua Km e registra em Km inicial na tabela solicitacoes
-    $kmcar = DB::table('vehicles')->where('id', $info['veiculo'])->get('km');
-    foreach ($kmcar as $kmcar) {
-    }
-    $authorizacao->kminicial                  = $kmcar->km;
-
+    $authorizacao->kminicial                  = $info['kminicial'];
     $authorizacao->kmfinal                    = $info['kmfinal'];
     $authorizacao->autorizacao                = Auth::user()->name;
     $authorizacao->data                       = date('Y-m-d');
@@ -108,7 +102,7 @@ class AuthorizacaoController extends Controller
     // Cria um custo em Km após status REALIZADA
     if ($info['statussolicitacao'] == 'REALIZADA') {
 
-      $amount = (intval($info['kmfinal']) - intval($kmcar->km));
+      $amount = (intval($info['kmfinal']) - intval($info['kminicial']));
       
       DB::table('expenses')->insert(
         [
@@ -119,29 +113,12 @@ class AuthorizacaoController extends Controller
           'amount' => $amount,
           'discount' => 0,
           'data' => date('Y-m-d'),
-	  'hora' => date('H:i:s'),
+	        'hora' => date('H:i:s'),
           'created_at' => now(),
           'updated_at' => now(),
         ]
       );
 
-      // Quando status REALIZADA, altera o Km do veículo selecionado na tabela vehicles
-      DB::table('vehicles')->where('id', $info['veiculo'])->update(
-        [
-          'km' => $info['kmfinal'],
-        ]
-      );
-    }
-
-    if ($info['statussolicitacao'] == 'NÃO REALIZADA') {
-
-      $authorizacao->kmfinal                    = $kmcar->km;
-      
-      DB::table('vehicles')->where('id', $info['veiculo'])->update(
-        [
-          'km' => $kmcar->km,
-        ]
-      );
     }
 
     $authorizacao->save();

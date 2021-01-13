@@ -29,7 +29,6 @@
         <th>Modelo</th>
         <th>Placa</th>
         <th>Ano</th>
-        <th>Quilometragem atual(Km)</th>
         <th>Situação do veiculo</th>
         <th>Ação</th>
       </tr>
@@ -48,7 +47,6 @@
             <td>{{ $vehicle->model }}</td>
             <td>{{ $vehicle->placa }}</td>
             <td>{{ $vehicle->year}}</td>
-            <td>{{ $vehicle->km}}</td>
             @if($vehicle->situacao == "LIVRE")
             <td><label class="ls-ico-thumbs-up" style="color: green;"> {{ $vehicle->situacao }}</label></td>
             @elseif($vehicle->situacao == "EM USO")
