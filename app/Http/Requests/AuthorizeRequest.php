@@ -38,7 +38,7 @@ class AuthorizeRequest extends FormRequest
             'horaretornoautorizada'     => 'required|date|after_or_equal:datasaidaautorizada',
             'horaretornoautorizada'     => 'required|date_format:H:i|after_or_equal:horaretornoautorizada',
             'kminicial'                 => 'required',
-            'kmfinal'                   => 'required|after_or_equal:kminicial',
+            'kmfinal'                   => 'required|min:kminicial',
             'statussolicitacao'         => 'required',
         ];
     }
@@ -70,7 +70,7 @@ class AuthorizeRequest extends FormRequest
             'dataretornoautorizada.after_or_equal'      => 'Dr. Emmett Brown, é você? A data e hora de retorno não podem ser menor que a data e hora de saída.',
             'kminicial'                                 => 'Por favor informe a quilometragem inicial',
             'kmfinal'                                   => 'Por favor informe a quilometragem final',
-            'kmfinal.after_or_equal'                    => 'A Quilometragem final precisa ser maior ou igual a inicial.',
+            'kmfinal.min'                               => 'A Quilometragem final precisa ser maior ou igual a inicial.',
             'statussolicitacao.required'                => 'Por favor informe o status da solicitação.',
         ];
     }
