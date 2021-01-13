@@ -135,19 +135,6 @@
           </label>
         </div>
 
-        <div class="form-group col-md-4">
-          <label class="ls-label col-md-12 @error('km') ls-error @enderror">
-            <b class="ls-label-text">Quilometragem atual(Km)</b>
-            <input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" name="km" maxlength="6" autocomplete="off" value="{{$vehicle->km}}">
-
-            @error('km')
-            <div class="ls-help-message">
-              {{$message}}
-            </div>
-            @enderror
-
-          </label>
-        </div>
       </div>
     </fieldset>
     <div class="ls-actions-btn">

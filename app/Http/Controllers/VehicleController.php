@@ -80,7 +80,7 @@ class VehicleController extends Controller
     $vehicle->model = $info['model'];
     $vehicle->placa = $info['placa'];
     $vehicle->year  = $info['year'];
-    $vehicle->km  = $info['km'];
+    // $vehicle->km  = $info['km'];
     $vehicle->situacao = $info['situacao'];
     $vehicle->descricao = $info['descricao'];
     $vehicle->save();
