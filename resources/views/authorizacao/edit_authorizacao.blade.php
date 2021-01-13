@@ -351,6 +351,13 @@
                         <label class="ls-label col-md-12 @error('kminicial') ls-error @enderror">
                             <b class="ls-label-text">Quilometragem inicial</b>
                             <input type="text" id="kminicial" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" name="kminicial" maxlength="6" autocomplete="off" value="{{$authorizacao->kminicial}}">
+
+                            @error('kminicial')
+                            <div class="ls-help-message">
+                                {{$message}}
+                            </div>
+                            @enderror
+
                         </label>
                     </div>
                     
@@ -358,6 +365,13 @@
                         <label class="ls-label col-md-12 @error('kmfinal') ls-error @enderror">
                             <b class="ls-label-text">Quilometragem final</b>
                             <input type="text" id="kmfinal" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" name="kmfinal" maxlength="6" autocomplete="off" value="{{$authorizacao->kmfinal}}">
+                        
+                            @error('kmfinal')
+                            <div class="ls-help-message">
+                                {{$message}}
+                            </div>
+                            @enderror
+                        
                         </label>
                     </div>
                 </div>
