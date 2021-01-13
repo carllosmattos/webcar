@@ -10,19 +10,8 @@
 
 @endsection
 
-
-
-
-
-
-
-
-
-
-
-
-<!-- ################################# H O M E #############################################
-@extends('layouts.application')
+################################# H O M E #############################################
+<!-- @extends('layouts.application')
 
 @section('content')
 <h1 class="ls-title-intro ls-ico-home">Bem vindo ao WebCar HSJ</h1>
