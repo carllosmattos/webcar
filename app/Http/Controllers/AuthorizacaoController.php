@@ -89,6 +89,7 @@ class AuthorizacaoController extends Controller
         'driver_id' => $driver->id,
       ]
     );
+    
     $authorizacao->datasaidaautorizada    = $info['datasaidaautorizada'];
     $authorizacao->horasaidaautorizada    = $info['horasaidaautorizada'];
     $authorizacao->dataretornoautorizada  = $info['dataretornoautorizada'];
