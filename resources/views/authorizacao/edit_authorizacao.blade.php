@@ -224,11 +224,13 @@
                                     @foreach($vehicles->getVehicles() as $vehicles)
                                     @if($authorizacao->veiculo == $vehicles->id)
                                     <option value="{{ $authorizacao->veiculo }}" selected>{{ $vehicles->brand }} {{ $vehicles->model }} -
-                                        {{ $vehicles->placa}}</option>
+                                        {{ $vehicles->placa}}
+                                    </option>
                                     @endif
                                     @if(($vehicles->situacao == "LIVRE" || $vehicles->situacao == null) && $authorizacao->veiculo != $vehicles->id)
                                     <option value="{{ $vehicles->id }}">{{ $vehicles->brand }} {{ $vehicles->model }} -
-                                        {{ $vehicles->placa}}</option>
+                                        {{ $vehicles->placa}}
+                                    </option>
                                     @else
 
                                     @endif
@@ -360,20 +362,35 @@
 
                         </label>
                     </div>
-                    
+
                     <div class="form-group col-md-3">
                         <label class="ls-label col-md-12 @error('kmfinal') ls-error @enderror">
                             <b class="ls-label-text">Quilometragem final</b>
                             <input type="text" id="kmfinal" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" name="kmfinal" maxlength="6" autocomplete="off" value="{{$authorizacao->kmfinal}}">
-                        
+
                             @error('kmfinal')
                             <div class="ls-help-message">
                                 {{$message}}
                             </div>
                             @enderror
-                        
+
                         </label>
                     </div>
+                    <script>
+                        function kmfinalMaiorMenor() {
+                            var el = document.getElementById("kmfinal").value;
+                            var el2 = document.getElementById("kminicial").value;
+                            var displayEl = document.getElementById("mileage").style.display;
+                            if (el < el2 && displayEl == "block") {
+                                alert("A quilometragem Final precisa ser maior que " + el2);
+                                $("#formAuth").submit(function() {
+                                    return false;
+                                });
+                                window.location.reload();
+                            }
+                        }
+                    </script>
+
                 </div>
 
                 <div class="col-md-12">
