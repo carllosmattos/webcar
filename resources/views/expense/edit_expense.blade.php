@@ -68,7 +68,7 @@
         <div class="form-group col-md-4">
           <label class="ls-label col-md-12 @error('amount') ls-error @enderror">
             <b class="ls-label-text">Quantidade:</b>
-            <input type="number" name="amount" class="ls-no-spin form-control" value="{{$expense->amount}}">
+            <input type="number" name="amount" step = "any"  class="ls-no-spin form-control" value="{{$expense->amount}}">
 
             @error('amount')
             <div class="ls-help-message">
